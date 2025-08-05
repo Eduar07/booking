@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+  / 🎨 Colores /
+  --color-negro: #242731;
+  --color-azul: #4776d0;
+  --color-morado: #A162F7;
+  --color-gris: #B1B5C3;
+  --color-background: #F5F5F5;
+  --color-white:#FFFFFF;
+  --naranjado:  #FF6370;
+
+  / 🔠 Tipografías /
+  --font-dm-sans: 'DM Sans', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+
+  / 🔡 Pesos tipográficos /
+  --font-weight-bold: 700;
+
+   /*📏 Tamaños de texto (px to rem) — base: 16px  */
+  --text-xl: 1.875rem;  /* 30px */
+  --text-lg: 1.25rem;    /* 20px */
+  --text-base: 1.125rem;/* 18px */
+  --text-sm: 1rem;     /* 16px */
+}
+body{
+  background-color:var(--color-background);
+}
+.main{
+  background-color: rgba(228, 226, 226, 0.258);
+  display: grid;
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+  grid-template-columns: 240px 1fr; 
+  grid-template-rows: 80px 1fr;   
+  height: 112vh;
+  grid-template-areas: 
+   "sidebar main__header"
+    "sidebar sell-cars";
+}
+
+.sidebar{
+    grid-area: sidebar;
+}
+.main__header{
+    grid-area:main__heade ;
+}
+.sell-cars{
+    grid-area: sell-cars;
+}
+.sell-cars{
+    display: flex;
+   flex-direction: column;
+    background-color:var(--color-background);
+      padding-top: 2rem;
+    padding-left: 2rem;
+    padding-right: 1rem;
+}
+
+.sell-cars__header{
+     display: flex;
+    flex-direction: column;
+}
+
+
+.sell-cars__header h1{
+    font-family: var(--font-dm-sans);
+    font-size: var(--text-xl);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+.sell-cars__icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.sell-cars__icons .sell{
+   width: 657px;
+   height: 398px;
+background-color:var(--color-white);
+  box-shadow: 0 4px 12px #FFFFFF;
+  border-radius: 8px;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #d3d3d3; 
+border-radius: 8px; 
+}
+.carro:hover{
+   transform: scale(1.1);
+  filter: brightness(1.2) drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+  cursor: pointer;
+}
+
+.sell-cars__icons .estadistica{
+   width: 400px;
+   height: 398px;
+    background-color:var(--color-white);
+  box-shadow: 0 4px 12px #FFFFFF;
+   border: 1px solid #FF6464;
+border-radius: 8px; 
+padding: 1rem;
+}
+
+.sell-cars__offers-container{
+    display: flex;
+    flex-direction: column;
+    height: 60%;
+    
+}
+
+.offers__title h1{
+    margin-top: 1rem;
+    font-size: var(--text-xl);
+    font-family: var(--font-dm-sans);
+    color: #242731;
+    margin-bottom: 1rem;
+}
+.offers__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    margin-bottom: 2rem;
+    background-color:var(--color-white);
+  box-shadow: 0 4px 12px #FFFFFF;
+  height: 147px;
+  align-items: center;
+  border-radius: 8px;
+
+}
+
+.offer__user .user__name{
+    font-size: var(--text-base);
+    font-family: var(--font-dm-sans);
+    color:  #242731;;
+}
+.offer__user span{
+    color: #FF6464;
+    font-family: var(--font-dm-sans);
+    font-size: var(--text-lg);
+}
+.offer__user h2{
+    color: var(--color-gris);
+    font-family: var(--font-dm-sans);
+    font-size: 12px;
+}
+.user__average{
+    color: var(--color-gris);
+    font-family: var(--font-dm-sans);
+    font-size: 12px;
+}
+.offer__metric h3{
+   color: var(--color-gris);
+    font-family: var(--font-dm-sans);
+    font-size: var(--text-sm)
+}
+.offer__metric .azul{
+   color: #407EF9;
+}
+.offer__metric .rosado{
+   color: #FF6370;
+}
+.offer__metric .morado{
+   color: var(--color-morado);
+}
+
+
+
+/* codigo de empaquetamiento*/
+.mainheader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+   padding-right: 2.5rem;
+    background-color:var(--color-white);
+  box-shadow: 0 4px 12px #FFFFFF;
+}
+
+.headersearch{
+  padding-left: 2.4rem;
+  align-items: center;
+  position: relative;
+}
+
+.headeravatar,
+.bi-bell{
+  cursor: pointer;
+}
+.headersearch input{
+  width: 400px;
+  height: 45px;
+  border: none;
+  background-color: rgba(169, 166, 166, 0.216);
+  border-radius: 8px;
+ padding-left: 2.5rem; 
+ font-size: 1.3rem;
+}
+.bi-search{
+  position: absolute;
+  left: 50px;
+  top:14px;
+  font-size: 20px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+.sidebar{
+ display: flex; 
+ flex-direction: column;
+ justify-content: space-between;
+ padding:1.2rem ;
+background-color:var(--color-white);
+box-shadow: 0 4px 12px #FFFFFF;
+height: 100%;
+}
+.sidebarmain-nav{
+display: flex;
+flex-direction: column;
+
+  justify-content: space-around;
+height: 325px;
+row-gap: 10px;
+
+}
+.sidebarmain-nav a:hover{
+  background-color: rgba(128, 128, 128, 0.268);
+  cursor: pointer;
+  border-radius: 4px;
+ 
+}
+.sidebarmain-nav > a:nth-of-type(1) {
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+  text-decoration: none;
+  color: var(--color-negro);
+  font-weight: var(--font-weight-bold);
+  font-family: var(--font-dm-sans);
+  font-size: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.sidebarmain-nav > a:nth-of-type(1):hover {
+  background-color: #4777d051;
+  display: flex;
+
+
+}
+.sidebarmain-nav > a:nth-of-type(2),
+.sidebarmain-nav > a:nth-of-type(3),
+.sidebarmain-nav > a:nth-of-type(4),
+.sidebarmain-nav > a:nth-of-type(5),
+.sidebarmain-nav > a:nth-of-type(6){
+  color: var(--color-gris);
+  font-size: var(--text-sm);
+  font-family: var(--text-sm);
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+  text-decoration: none;
+  margin-left: 1rem;
+  padding-top: 1rem;
+  padding-left: 0.2rem;
+  padding-bottom: 1rem;
+}
+.sidebarfooter-nav{
+  display: flex;
+  flex-direction: column;
+  height: 127px;
+  justify-content: space-around;
+}
+.sidebarfooter-nav > a:nth-of-type(1),
+.sidebarfooter-nav > a:nth-of-type(2){
+ color: var(--color-gris);
+  font-size: var(--text-sm);
+  font-family: var(--text-sm);
+  display: flex;
+  flex-direction: row;
+  column-gap: 12px;
+  text-decoration: none;
+  padding-left: 0.2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-left: 1rem;
+}
+.sidebarfooter-nav .sidebarlink:hover,
+.sidebar__link:hover{
+  background-color: rgba(128, 128, 128, 0.268);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
